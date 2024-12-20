@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <h1>Contactați-ne</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="nume" class="form-label">Nume</label>
+            <input type="text" class="form-control" id="nume" name="nume" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="mesaj" class="form-label">Mesaj</label>
+            <textarea class="form-control" id="mesaj" name="mesaj" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Trimite</button>
+    </form>
+{% endblock %}

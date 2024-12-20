@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Rezervare{% endblock %}
+
+{% block content %}
+    <h1>Formular de Rezervare</h1>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Adaugă câmpurile necesare pentru rezervare -->
+        <div class="mb-3">
+            <label for="nume_client" class="form-label">Nume</label>
+            <input type="text" class="form-control" id="nume_client" name="nume_client" required>
+        </div>
+        <div class="mb-3">
+            <label for="email_client" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email_client" name="email_client" required>
+        </div>
+        <div class="mb-3">
+            <label for="telefon" class="form-label">Telefon</label>
+            <input type="text" class="form-control" id="telefon" name="telefon" required>
+        </div>
+        <div class="mb-3">
+            <label for="data_sosire" class="form-label">Data Sosirii</label>
+            <input type="date" class="form-control" id="data_sosire" name="data_sosire" required>
+        </div>
+        <div class="mb-3">
+            <label for="data_plecare" class="form-label">Data Plecării</label>
+            <input type="date" class="form-control" id="data_plecare" name="data_plecare" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Rezervă</button>
+    </form>
+{% endblock %}
