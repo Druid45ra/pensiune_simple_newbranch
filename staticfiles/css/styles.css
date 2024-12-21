@@ -1,0 +1,166 @@
+/* Stiluri generale */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('../img/hero-bg.jpg') center/cover no-repeat;
+    padding: 100px 0;
+    margin-top: -1.5rem;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,.1) !important;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-lg {
+    padding: 0.75rem 2rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,123,255,.3);
+}
+
+/* Carousel Styles */
+.carousel-item {
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    bottom: 3rem;
+}
+
+.carousel-caption h1,
+.carousel-caption h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .carousel-caption {
+        padding: 1rem;
+        bottom: 1rem;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.75rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff !important;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Imagini */
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+/* Efecte de hover pentru link-uri */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}

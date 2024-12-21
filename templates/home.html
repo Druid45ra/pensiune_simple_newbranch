@@ -1,5 +1,65 @@
-{% extends "base.html" %} {% block title %}Pagina Principală{% endblock %} {%
-block content %}
-<h1>Bine ați venit la Pensiunea Noastră!</h1>
-<p>Aici puteți găsi informații despre camere și rezervări.</p>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Pagina Principală{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section text-center py-5 mb-5 bg-light rounded">
+    <h1 class="display-4 mb-4">Bine ați venit la Pensiunea Noastră!</h1>
+    <p class="lead mb-4">Experimentați confortul și ospitalitatea într-o locație de vis</p>
+    <a href="{% url 'rezervare' %}" class="btn btn-primary btn-lg">Rezervă Acum</a>
+</div>
+
+<!-- Facilități -->
+<div class="row mb-5">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-wifi display-4 text-primary mb-3"></i>
+                <h3 class="card-title h4">Wi-Fi Gratuit</h3>
+                <p class="card-text">Rămâneți conectat cu internet de mare viteză în toată pensiunea.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-cup-hot display-4 text-primary mb-3"></i>
+                <h3 class="card-title h4">Mic Dejun Inclus</h3>
+                <p class="card-text">Începeți ziua cu un mic dejun tradițional bogat și proaspăt.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-p-circle display-4 text-primary mb-3"></i>
+                <h3 class="card-title h4">Parcare Gratuită</h3>
+                <p class="card-text">Parcare privată gratuită disponibilă pentru toți oaspeții noștri.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Despre Noi Preview -->
+<div class="row align-items-center mb-5">
+    <div class="col-md-6">
+        <h2 class="mb-4">Despre Pensiunea Noastră</h2>
+        <p class="lead">Situată într-o zonă pitorească, pensiunea noastră oferă o experiență unică de cazare, combinând confortul modern cu ospitalitatea tradițională.</p>
+        <p>Cu o vedere spectaculoasă și facilități moderne, suntem alegerea perfectă pentru o vacanță relaxantă sau un weekend prelungit.</p>
+        <a href="{% url 'despre' %}" class="btn btn-outline-primary">Află mai multe</a>
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'img/pensiune.jpg' %}" alt="Pensiunea Noastră" class="img-fluid rounded shadow">
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="bg-primary text-white p-5 rounded text-center">
+    <h2 class="mb-4">Pregătit pentru o experiență de neuitat?</h2>
+    <p class="lead mb-4">Rezervă acum și beneficiază de cele mai bune prețuri pentru sejurul tău!</p>
+    <a href="{% url 'camere' %}" class="btn btn-light btn-lg me-3">Vezi Camerele</a>
+    <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">Contactează-ne</a>
+</div>
 {% endblock %}
